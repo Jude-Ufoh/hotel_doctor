@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Doctor | Hotel Management &amp; Hospitality Consulting in Nigeria</title>
+  <meta name="description" content="Hotel Doctor helps hotel owners and managers in Nigeria improve operations, train staff, market their hotels and grow profit. In partnership with Esquises Global Ltd, Lagos." />
+  <link rel="icon" href="images/logo-mark.png" />
+
+  <!-- Fonts: Montserrat for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Hidden icon library (Lucide-style line icons). Each icon is used later with <use href="#name"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-settings" viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></symbol>
+      <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+      <symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></symbol>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+      <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></symbol>
+      <symbol id="i-trending" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <!-- WhatsApp is a filled brand shape, so it is drawn with fill instead of stroke -->
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.29A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Lets keyboard users jump straight past the menu -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER / NAVIGATION ===================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-bar">
+      <a href="#top" class="brand" aria-label="Hotel Doctor home">
+        <span class="brand-tile"><img src="images/logo-mark.png" alt="" width="40" height="33" /></span>
+        <span class="brand-name">Hotel <span>Doctor</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a Consult</a>
+      </nav>
+
+      <!-- Menu button: only visible on phones -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="glow glow-a" aria-hidden="true"></div>
+      <div class="glow glow-b" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hotel management &amp; consulting · Lagos, Nigeria</p>
+          <h1>Healing hotel challenges. <span class="hl">Building hotel success.</span></h1>
+          <p class="lead">
+            Hotel Doctor helps hotel owners, managers and operators across Nigeria run better hotels:
+            stronger daily operations, well-trained staff, smarter finances and marketing that fills rooms.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book a Consultation <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a href="#services" class="btn btn-ghost">See Our Services</a>
+          </div>
+
+          <ul class="hero-facts">
+            <li><svg class="icon"><use href="#i-award"/></svg> CAC-registered partner</li>
+            <li><svg class="icon"><use href="#i-clock"/></svg> Available 24/7</li>
+            <li><svg class="icon"><use href="#i-map"/></svg> Based in Lagos</li>
+          </ul>
+        </div>
+
+        <div class="hero-media reveal">
+          <img class="zoomable" src="images/reception.webp" alt="Elegant hotel reception desk with the Hotel Doctor name and warm pendant lighting" width="400" height="810" fetchpriority="high" />
+          <div class="hero-badge">
+            <svg class="icon"><use href="#i-star"/></svg>
+            <div>
+              <strong>Expert Solutions.</strong>
+              <span>Stronger Hotels. Better Experiences.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOUR PILLARS STRIP ===================== -->
+    <section class="pillars" aria-label="What we stand for">
+      <div class="container pillars-grid">
+        <div class="pillar"><span class="icon-circle"><svg class="icon"><use href="#i-handshake"/></svg></span><div><h3>Partnership</h3><p>Built on trust and collaboration</p></div></div>
+        <div class="pillar"><span class="icon-circle"><svg class="icon"><use href="#i-lightbulb"/></svg></span><div><h3>Innovation</h3><p>Smart solutions for modern hotels</p></div></div>
+        <div class="pillar"><span class="icon-circle"><svg class="icon"><use href="#i-trending"/></svg></span><div><h3>Performance</h3><p>Driving growth and profitability</p></div></div>
+        <div class="pillar"><span class="icon-circle"><svg class="icon"><use href="#i-shield"/></svg></span><div><h3>Trust</h3><p>Committed to your success</p></div></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Who we are</p>
+          <h2>About <span class="hl">Hotel Doctor</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              <strong>Hotel Doctor</strong> is a hotel business education, consulting and marketing platform.
+              We promote, educate, analyse and communicate practical ideas about hotel operations and
+              business management, so hotel owners, managers and hospitality professionals can make better
+              decisions and grow.
+            </p>
+            <p>
+              We work in partnership with <strong>Esquises Global Ltd</strong>, a Lagos-based company with expertise in
+              hotel management, business planning and hospitality development. Together we bring a carefully
+              selected team of professionals with the knowledge and experience to manage and improve hotel
+              operations for our clients.
+            </p>
+            <a href="#services" class="text-link">What we offer <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+
+          <div class="about-photos reveal">
+            <img class="ph-tall zoomable" src="images/lobby.webp" alt="Luxury hotel lobby with marble floors and a reception desk" width="756" height="1087" loading="lazy" />
+            <img class="zoomable" src="images/suite.webp" alt="Bright hotel suite with a city view" width="474" height="316" loading="lazy" />
+            <img class="zoomable" src="images/training.webp" alt="Hospitality professionals attending a training session" width="283" height="195" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Mission and Vision -->
+        <div class="mv-grid">
+          <article class="card mv-card reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-trending"/></svg></span>
+            <h3>Our Vision</h3>
+            <p>To become the leading hotel management, marketing and hospitality consulting platform, recognised for transforming hotel businesses through professional guidance, innovation, education and operational excellence.</p>
+          </article>
+          <article class="card mv-card reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-heart"/></svg></span>
+            <h3>Our Mission</h3>
+            <p>To promote, educate, analyse and communicate best practices in hotel management. Through strategic marketing, professional consulting, staff development and collaboration with industry experts, we help hotels improve service quality, increase profitability and achieve sustainable growth.</p>
+          </article>
+        </div>
+
+        <!-- Core values -->
+        <div class="values reveal">
+          <h3 class="values-title">Our Core Values</h3>
+          <ul class="values-grid">
+            <li><svg class="icon"><use href="#i-award"/></svg><div><strong>Professionalism</strong><span>Delivering quality, expert hospitality solutions.</span></div></li>
+            <li><svg class="icon"><use href="#i-shield"/></svg><div><strong>Integrity</strong><span>Upholding honesty, transparency and ethical practice.</span></div></li>
+            <li><svg class="icon"><use href="#i-star"/></svg><div><strong>Excellence</strong><span>The highest standards in operations and service.</span></div></li>
+            <li><svg class="icon"><use href="#i-lightbulb"/></svg><div><strong>Innovation</strong><span>Modern ideas and technology for hospitality businesses.</span></div></li>
+            <li><svg class="icon"><use href="#i-handshake"/></svg><div><strong>Collaboration</strong><span>Working with clients and professionals for shared success.</span></div></li>
+            <li><svg class="icon"><use href="#i-heart"/></svg><div><strong>Customer Satisfaction</strong><span>Exceptional value for hotel guests and clients.</span></div></li>
+          </ul>
+        </div>
+
+        <!-- Certificate / trust block -->
+        <div class="cert card reveal">
+          <img class="zoomable" src="images/certificate.webp" alt="Certificate of Incorporation for Esquises Global Ltd from the Corporate Affairs Commission of Nigeria" width="700" height="961" loading="lazy" />
+          <div>
+            <p class="eyebrow">Registered &amp; trusted</p>
+            <h3>Incorporated with the Corporate Affairs Commission</h3>
+            <p>Our partner company, Esquises Global Ltd, is registered with the Corporate Affairs Commission (CAC) of the Federal Republic of Nigeria. Esquises Global Ltd was established in 2019 as a subsidiary of Esquises POP Service, founded in 2015.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section section-alt" id="services">
+      <div class="glow glow-c" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What we do</p>
+          <h2>Our <span class="hl">Services</span></h2>
+          <p class="section-sub">Practical, hands-on support for every part of your hotel business.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-settings"/></svg></span>
+            <h3>Hotel Operations &amp; Management</h3>
+            <p>Improve daily operations, standards, productivity and accountability across every department.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-lightbulb"/></svg></span>
+            <h3>Business Ideas &amp; Advisory</h3>
+            <p>Practical guidance for starting, building and improving hospitality businesses.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-wallet"/></svg></span>
+            <h3>Financial Expertise</h3>
+            <p>Understand your revenue, costs, budgeting and financial controls so your hotel stays profitable.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-calendar"/></svg></span>
+            <h3>Bookings &amp; Reservations</h3>
+            <p>Support with hotel booking and reservation services to keep your rooms filled.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-party"/></svg></span>
+            <h3>Events Management</h3>
+            <p>Planning and managing hospitality-related events, from conferences to celebrations.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-megaphone"/></svg></span>
+            <h3>Marketing &amp; Content</h3>
+            <p>Social media, digital marketing and modern technology to raise your visibility and attract more guests.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-users"/></svg></span>
+            <h3>Staff Training &amp; Development</h3>
+            <p>Training, workshops and recruitment support to improve professionalism and service delivery.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="icon-circle"><svg class="icon"><use href="#i-clipboard"/></svg></span>
+            <h3>Hotel Audit &amp; Assessment</h3>
+            <p>Regular evaluation of facilities, services and management practices to find areas for improvement.</p>
+          </article>
+        </div>
+
+        <!-- Call-to-action banner inside services -->
+        <div class="cta-banner reveal">
+          <div>
+            <h3>Is your hotel facing a challenge?</h3>
+            <p>Tell us about it. We'll diagnose the problem and recommend a practical plan.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Talk to Hotel Doctor <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The people behind the work</p>
+          <h2>Meet <span class="hl">Our Team</span></h2>
+        </div>
+
+        <div class="team-grid">
+          <article class="card member reveal">
+            <img src="images/team-nnamdi.webp" alt="Portrait of Mr. Uchemefune Nnamdi Celestine" width="600" height="760" loading="lazy" />
+            <div class="member-body">
+              <h3>Mr. Uchemefune Nnamdi Celestine</h3>
+              <p class="role">M.D / C.E.O</p>
+              <p>Founder of Esquises Global Ltd and a Certified Hotel Administrator (CHA) with an MBA. Former Chief Internal Auditor at Grand Hotel, Asaba, and Sales Executive at Chellarams Plc.</p>
+            </div>
+          </article>
+
+          <article class="card member reveal">
+            <!-- No photo: initials tile keeps the card the same size as the others -->
+            <div class="member-initials" aria-hidden="true">JO</div>
+            <div class="member-body">
+              <h3>Engr. Jude U. Onyeajunwanne <abbr title="Member, Nigerian Institute of Management">(MNIM)</abbr></h3>
+              <p class="role">Business Development Manager</p>
+              <p>B.Eng and M.Eng in Electrical Engineering (University of Benin) and M.Sc in Data Science (University of Salford, UK). Lead Data Scientist, Webplay Nigeria Limited.</p>
+            </div>
+          </article>
+
+          <article class="card member reveal">
+            <img src="images/team-lambart.webp" alt="Portrait of Chukwunyere Lambart" width="548" height="731" loading="lazy" />
+            <div class="member-body">
+              <h3>Chukwunyere Lambart</h3>
+              <p class="role">CEO/MD, Lobito Enterprises</p>
+              <p>Leads Lobito Enterprises, a car sales and logistics business, bringing practical business and logistics experience to the team.</p>
+            </div>
+          </article>
+
+          <article class="card member reveal">
+            <img src="images/team-peter.webp" alt="Portrait of Peter Efiong Udo" width="600" height="800" loading="lazy" />
+            <div class="member-body">
+              <h3>Peter Efiong Udo</h3>
+              <p class="role">Media Aid</p>
+              <p>Handles customer service, video editing and media content that keeps our clients' hotels visible online.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-alt" id="contact">
+      <div class="glow glow-a" aria-hidden="true"></div>
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Book a <span class="hl">Consultation</span></h2>
+          <p class="lead">Send us a message and our team will get back to you quickly. We're available 24/7.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="icon-circle"><svg class="icon"><use href="#i-map"/></svg></span>
+              <div><strong>Office</strong>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=5+Ikosi+Road+Ikosi-Ketu+Lagos" target="_blank" rel="noopener">No. 5, Ikosi Road, Ikosi-Ketu, Lagos</a>
+              </div>
+            </li>
+            <li>
+              <span class="icon-circle"><svg class="icon"><use href="#i-phone"/></svg></span>
+              <div><strong>Phone</strong>
+                <a href="tel:+2348035934716">0803 593 4716</a>
+                <a href="tel:+2349015913175">0901 591 3175</a>
+              </div>
+            </li>
+            <li>
+              <span class="icon-circle"><svg class="icon"><use href="#i-mail"/></svg></span>
+              <div><strong>Email</strong>
+                <a href="mailto:esquisesgloballtd@gmail.com">esquisesgloballtd@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="icon-circle"><svg class="icon"><use href="#i-clock"/></svg></span>
+              <div><strong>Working hours</strong><span>We are available 24/7</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Enquiry form: on submit, script.js opens WhatsApp with the message filled in -->
+        <form class="card contact-form reveal" id="contact-form" novalidate>
+          <h3>Send us a message</h3>
+
+          <div class="field">
+            <label for="name">Your name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error" />
+            <p class="error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="hotel">Hotel / business name</label>
+            <input id="hotel" name="hotel" type="text" autocomplete="organization" />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="phone-error" placeholder="e.g. 0803 000 0000" />
+            <p class="error" id="phone-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="service">What do you need help with?</label>
+            <select id="service" name="service">
+              <option>General consultation</option>
+              <option>Hotel operations &amp; management</option>
+              <option>Business ideas &amp; advisory</option>
+              <option>Financial expertise</option>
+              <option>Bookings &amp; reservations</option>
+              <option>Events management</option>
+              <option>Marketing &amp; content</option>
+              <option>Staff training &amp; development</option>
+              <option>Hotel audit &amp; assessment</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Your message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" required aria-describedby="message-error"></textarea>
+            <p class="error" id="message-error" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <svg class="icon"><use href="#i-whatsapp"/></svg> Send via WhatsApp
+          </button>
+          <p class="form-note">This opens WhatsApp with your message ready to send to Hotel Doctor.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand" aria-label="Hotel Doctor, back to top">
+          <span class="brand-tile"><img src="images/logo-mark.png" alt="" width="40" height="33" loading="lazy" /></span>
+          <span class="brand-name">Hotel <span>Doctor</span></span>
+        </a>
+        <p class="footer-motto">Healing hotel challenges, building hotel success.</p>
+        <p class="footer-small">In partnership with Esquises Global Ltd.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2348035934716">0803 593 4716</a></li>
+          <li><a href="tel:+2349015913175">0901 591 3175</a></li>
+          <li><a href="mailto:esquisesgloballtd@gmail.com">esquisesgloballtd@gmail.com</a></li>
+          <li>No. 5, Ikosi Road, Ikosi-Ketu, Lagos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Hotel Doctor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="wa-float" href="https://wa.me/2348035934716" target="_blank" rel="noopener" aria-label="Chat with Hotel Doctor on WhatsApp">
+    <svg class="icon"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- Full-size picture viewer (opens when a picture is clicked) -->
+  <dialog class="lightbox" id="lightbox" aria-label="Enlarged picture">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close picture">
+      <svg class="icon"><use href="#i-close"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
