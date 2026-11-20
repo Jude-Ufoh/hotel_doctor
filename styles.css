@@ -1,23 +1,23 @@
 /* =========================================================
    Hotel Doctor website styles
-   Colours come from the Hotel Doctor brochure (greens) plus
-   a warm gold accent taken from the lobby lighting.
+   Colours come from the orange Hotel Doctor logo:
+   orange -> golden yellow -> olive green.
    ========================================================= */
 
 /* ---------- 1. Design tokens (change colours here) ---------- */
 :root {
-  --bg: #0a110b;            /* page background: green-tinted black */
-  --surface: #111c13;       /* cards */
-  --surface-2: #16251a;     /* raised cards / inputs */
+  --bg: #120d08;            /* page background: warm dark brown */
+  --surface: #1b140d;       /* cards */
+  --surface-2: #241a10;     /* raised cards / inputs */
   --border: rgba(255, 255, 255, 0.09);
-  --text: #eef3ec;          /* main text */
-  --muted: #a8b7a6;         /* secondary text (passes contrast on --bg) */
+  --text: #f7efe3;          /* main text */
+  --muted: #c4b5a1;         /* secondary text (passes contrast on --bg) */
 
-  --green: #8cbf45;         /* bright leaf green, brand highlight on dark */
-  --green-brand: #68842d;   /* exact olive green from the logo */
-  --green-deep: #1f4514;    /* exact forest green from the brochure */
-  --gold: #d6ad5e;          /* warm accent */
-  --on-green: #0a110b;      /* text on green buttons */
+  --primary: #f5a033;       /* logo orange: buttons, links, icons */
+  --olive: #6b7538;         /* logo olive green */
+  --deep: #3a2812;          /* deep warm brown for strips and banners */
+  --gold: #f2c14e;          /* logo golden yellow: small labels */
+  --on-primary: #120d08;    /* text on orange buttons */
   --error: #ff8a7a;
 
   --radius: 18px;
@@ -59,7 +59,7 @@ p { margin: 0 0 1em; }
 
 .skip-link {
   position: absolute; left: 16px; top: -60px; z-index: 1000;
-  background: var(--green); color: var(--on-green);
+  background: var(--primary); color: var(--on-primary);
   padding: 10px 16px; border-radius: 8px; font-weight: 600; text-decoration: none;
 }
 .skip-link:focus { top: 12px; }
@@ -72,7 +72,13 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
   margin-bottom: 0.8em;
 }
-.hl { color: var(--green); }              /* highlighted word in headings */
+.hl {                                        /* highlighted words in headings */
+  color: var(--primary);                      /* fallback for old browsers */
+  /* same orange -> gold -> olive fade as the logo (olive lightened so it stays readable) */
+  background: linear-gradient(90deg, #f7952f, #f2c14e 55%, #b5bb5f);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .lead { font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
 
 .btn {
@@ -85,17 +91,17 @@ p { margin: 0 0 1em; }
 }
 .btn:active { transform: scale(0.97); }
 .btn-primary {
-  background: var(--green); color: var(--on-green);
-  box-shadow: 0 0 0 0 rgba(140, 191, 69, 0.4), 0 10px 30px rgba(140, 191, 69, 0.25);
+  background: var(--primary); color: var(--on-primary);
+  box-shadow: 0 0 0 0 rgba(245, 160, 51, 0.4), 0 10px 30px rgba(245, 160, 51, 0.25);
 }
-.btn-primary:hover { background: #9fd156; box-shadow: 0 10px 40px rgba(140, 191, 69, 0.4); }
+.btn-primary:hover { background: #ffb54d; box-shadow: 0 10px 40px rgba(245, 160, 51, 0.4); }
 .btn-ghost { border-color: rgba(255, 255, 255, 0.25); color: var(--text); background: transparent; }
-.btn-ghost:hover { border-color: var(--green); color: var(--green); }
+.btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
 .btn-block { width: 100%; }
 
 .text-link {
   display: inline-flex; align-items: center; gap: 0.4em;
-  color: var(--green); font-weight: 600; text-decoration: none;
+  color: var(--primary); font-weight: 600; text-decoration: none;
 }
 .text-link:hover .icon { transform: translateX(4px); }
 .text-link .icon { transition: transform 0.2s var(--ease); }
@@ -109,30 +115,30 @@ p { margin: 0 0 1em; }
 .icon-circle {
   display: inline-grid; place-items: center;
   width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
-  background: rgba(140, 191, 69, 0.12); color: var(--green);
-  border: 1px solid rgba(140, 191, 69, 0.3);
+  background: rgba(245, 160, 51, 0.12); color: var(--primary);
+  border: 1px solid rgba(245, 160, 51, 0.3);
 }
 
-/* Soft green glows in the background (like the red glows in the inspiration) */
+/* Soft orange and olive glows in the background (like the red glows in the inspiration) */
 .glow {
   position: absolute; width: 520px; height: 520px; border-radius: 50%;
   filter: blur(110px); opacity: 0.35; pointer-events: none; z-index: 0;
 }
-.glow-a { background: var(--green-brand); top: -140px; left: -160px; }
-.glow-b { background: var(--green-deep); bottom: -200px; right: -120px; opacity: 0.6; }
-.glow-c { background: var(--green-brand); top: 20%; right: -260px; opacity: 0.22; }
+.glow-a { background: var(--primary); opacity: 0.22; top: -140px; left: -160px; }
+.glow-b { background: var(--deep); bottom: -200px; right: -120px; opacity: 0.6; }
+.glow-c { background: var(--olive); top: 20%; right: -260px; opacity: 0.22; }
 
 /* ---------- 4. Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(10, 17, 11, 0.78);
+  background: rgba(18, 13, 8, 0.78);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
 .nav-bar { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-/* The logo's dark green would vanish on black, so it sits on a light tile */
+/* The logo sits on a light tile so its olive part stays visible on the dark background */
 .brand-tile {
   display: grid; place-items: center; width: 48px; height: 48px;
   background: #f6f4ee; border-radius: 12px; padding: 6px;
@@ -141,7 +147,7 @@ p { margin: 0 0 1em; }
   font-family: var(--font-head); font-weight: 800; letter-spacing: 0.12em;
   text-transform: uppercase; font-size: 0.95rem;
 }
-.brand-name span { color: var(--green); }
+.brand-name span { color: var(--primary); }
 
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a:not(.btn) {
@@ -149,10 +155,10 @@ p { margin: 0 0 1em; }
   padding: 8px 0; position: relative; transition: color 0.2s;
 }
 .main-nav a:not(.btn):hover, .main-nav a.active { color: var(--text); }
-/* small green underline marks the section you are in */
+/* small orange underline marks the section you are in */
 .main-nav a.active::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 2px; background: var(--green); border-radius: 2px;
+  height: 2px; background: var(--primary); border-radius: 2px;
 }
 .nav-cta { min-height: 42px; }
 
@@ -182,21 +188,21 @@ p { margin: 0 0 1em; }
   display: flex; flex-wrap: wrap; gap: 12px 24px; color: var(--muted); font-size: 0.92rem;
 }
 .hero-facts li { display: inline-flex; align-items: center; gap: 8px; }
-.hero-facts .icon { color: var(--green); }
+.hero-facts .icon { color: var(--primary); }
 
 .hero-media { position: relative; }
 /* Rounded "arch" image shape */
 .hero-media img {
   width: 100%; aspect-ratio: 400 / 520; object-fit: cover; object-position: center 40%;
   border-radius: 240px 240px var(--radius-lg) var(--radius-lg);
-  border: 1px solid rgba(140, 191, 69, 0.35);
-  box-shadow: var(--shadow), 0 0 80px rgba(104, 132, 45, 0.35);
+  border: 1px solid rgba(245, 160, 51, 0.35);
+  box-shadow: var(--shadow), 0 0 80px rgba(107, 117, 56, 0.35);
 }
 .hero-badge {
   position: absolute; left: -28px; bottom: 36px;
   display: flex; align-items: center; gap: 12px; max-width: 270px;
   padding: 14px 18px; border-radius: 16px;
-  background: rgba(17, 28, 19, 0.92); border: 1px solid var(--border);
+  background: rgba(27, 20, 13, 0.92); border: 1px solid var(--border);
   backdrop-filter: blur(8px); box-shadow: var(--shadow);
   font-size: 0.85rem; line-height: 1.4;
 }
@@ -205,18 +211,18 @@ p { margin: 0 0 1em; }
 .hero-badge span { color: var(--muted); }
 
 /* ---------- 6. Pillars strip ---------- */
-.pillars { background: var(--green-deep); border-block: 1px solid rgba(140, 191, 69, 0.25); }
+.pillars { background: var(--deep); border-block: 1px solid rgba(245, 160, 51, 0.25); }
 .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
 .pillar { display: flex; align-items: center; gap: 14px; padding: 26px 20px; }
 .pillar + .pillar { border-left: 1px solid rgba(255, 255, 255, 0.12); }
 .pillar h3 { font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 2px; }
-.pillar p { margin: 0; font-size: 0.88rem; color: #cfe0c8; }
-.pillar .icon-circle { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18); color: #cfe9a8; }
+.pillar p { margin: 0; font-size: 0.88rem; color: #e9dcc8; }
+.pillar .icon-circle { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18); color: #ffd28a; }
 
 /* ---------- 7. Sections ---------- */
 .section { position: relative; padding: 104px 0; overflow: hidden; }
 .section > .container { position: relative; z-index: 1; }
-.section-alt { background: #0d160f; }
+.section-alt { background: #17110a; }
 .section-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
 .section-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 800; }
 .section-sub { color: var(--muted); }
@@ -266,8 +272,8 @@ p { margin: 0 0 1em; }
   transition: transform 0.25s var(--ease), border-color 0.25s, box-shadow 0.25s;
 }
 .service:hover {
-  transform: translateY(-4px); border-color: rgba(140, 191, 69, 0.45);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(104, 132, 45, 0.18);
+  transform: translateY(-4px); border-color: rgba(245, 160, 51, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(107, 117, 56, 0.18);
 }
 .service h3 { font-size: 1.08rem; margin: 18px 0 8px; }
 .service p { color: var(--muted); font-size: 0.95rem; margin: 0; }
@@ -275,11 +281,11 @@ p { margin: 0 0 1em; }
 .cta-banner {
   margin-top: 48px; padding: 36px 40px; border-radius: var(--radius-lg);
   display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
-  background: linear-gradient(120deg, var(--green-deep), #2f5a1d 60%, var(--green-brand));
-  border: 1px solid rgba(140, 191, 69, 0.35);
+  background: linear-gradient(120deg, var(--deep), #5c4a1e 60%, var(--olive));
+  border: 1px solid rgba(245, 160, 51, 0.35);
 }
 .cta-banner h3 { font-size: 1.5rem; margin-bottom: 4px; }
-.cta-banner p { margin: 0; color: #dbe8d3; }
+.cta-banner p { margin: 0; color: #f0e4d2; }
 
 /* Team */
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
@@ -298,13 +304,13 @@ p { margin: 0 0 1em; }
 .contact-list li { display: flex; gap: 16px; align-items: flex-start; }
 .contact-list strong { display: block; font-family: var(--font-head); margin-bottom: 2px; }
 .contact-list div > a, .contact-list div > span { display: block; color: var(--muted); text-decoration: none; overflow-wrap: anywhere; }
-.contact-list a:hover { color: var(--green); }
+.contact-list a:hover { color: var(--primary); }
 
 .contact-form { padding: 32px; }
 .contact-form h3 { font-size: 1.3rem; margin-bottom: 20px; }
 .field { margin-bottom: 16px; }
 .field label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 6px; }
-.field label span { color: var(--green); }
+.field label span { color: var(--primary); }
 .field input, .field select, .field textarea {
   width: 100%; min-height: 48px; padding: 12px 14px;
   background: var(--bg); color: var(--text);
@@ -313,7 +319,7 @@ p { margin: 0 0 1em; }
 }
 .field textarea { resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(140, 191, 69, 0.25);
+  outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(245, 160, 51, 0.25);
 }
 .field [aria-invalid="true"] { border-color: var(--error); }
 .error { color: var(--error); font-size: 0.85rem; margin: 6px 0 0; min-height: 0; }
@@ -325,8 +331,8 @@ p { margin: 0 0 1em; }
   width: 100%; aspect-ratio: 4 / 4.4;
   display: grid; place-items: center;
   font-family: var(--font-head); font-weight: 800; font-size: 4rem; letter-spacing: 0.06em;
-  color: var(--green);
-  background: radial-gradient(circle at 50% 40%, #24401b, var(--green-deep) 45%, #0d1a0f);
+  color: var(--primary);
+  background: radial-gradient(circle at 50% 40%, #4a3418, var(--deep) 45%, #160f08);
 }
 
 /* ---------- Clickable pictures + full-size viewer ---------- */
@@ -339,7 +345,7 @@ p { margin: 0 0 1em; }
   display: none; /* shown only while open */
 }
 .lightbox[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
-.lightbox::backdrop { background: rgba(4, 8, 5, 0.92); }
+.lightbox::backdrop { background: rgba(8, 6, 3, 0.92); }
 .lightbox img {
   /* As big as the screen allows, without cropping */
   width: auto; height: auto; max-width: 92vw; max-height: 82vh;
@@ -356,14 +362,14 @@ p { margin: 0 0 1em; }
 .lightbox-close .icon { width: 24px; height: 24px; }
 
 /* ---------- 8. Footer ---------- */
-.site-footer { border-top: 1px solid var(--border); padding: 64px 0 24px; background: #070c08; }
+.site-footer { border-top: 1px solid var(--border); padding: 64px 0 24px; background: #0c0905; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: 40px; }
 .footer-motto { color: var(--text); margin: 18px 0 4px; font-weight: 500; }
 .footer-small { color: var(--muted); font-size: 0.9rem; }
 .site-footer h4 { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; color: var(--muted); }
 .site-footer ul a { text-decoration: none; overflow-wrap: anywhere; }
-.site-footer ul a:hover { color: var(--green); }
+.site-footer ul a:hover { color: var(--primary); }
 .footer-bottom { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 20px; color: var(--muted); font-size: 0.85rem; }
 .footer-bottom p { margin: 0; }
 
@@ -408,7 +414,7 @@ p { margin: 0 0 1em; }
   .main-nav {
     position: absolute; top: 72px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    padding: 12px 16px 20px; background: #0c150e; border-bottom: 1px solid var(--border);
+    padding: 12px 16px 20px; background: #150f09; border-bottom: 1px solid var(--border);
     display: none;
   }
   .main-nav.open { display: flex; }
