@@ -288,7 +288,8 @@ p { margin: 0 0 1em; }
 .cta-banner p { margin: 0; color: #f0e4d2; }
 
 /* Team */
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+/* Two team members: two centred columns so the cards don't look lost */
+.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 760px; margin: 0 auto; }
 .member { overflow: hidden; display: flex; flex-direction: column; }
 .member img { width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; object-position: center 25%; }
 .member-body { padding: 22px; }
